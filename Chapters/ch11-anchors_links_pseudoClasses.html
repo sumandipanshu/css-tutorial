@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <div class="site-inner">
+      <div class="content-sidebar-wrap">
+        <main class="content" id="genesis-content">
+          <article class="page entry">
+            <header class="entry-header">
+              <h1 class="entry-title" itemprop="headline">
+                Chapter 11 : CSS Anchors, Links and Pseudo Classes
+              </h1>
+            </header>
+            <div class="entry-content" itemprop="text">
+              <p>Below are the various ways you can use CSS to style links.</p>
+              <p class="code">
+                a:link {color: #009900;}<br />
+                a:visited {color: #999999;}<br />
+                a:hover {color: #333333;}<br />
+                a:focus {color: #333333;}<br />
+                a:active {color: #009900;}
+              </p>
+              <p>
+                Now lets take a look at what each one of the above link styles
+                actually does.
+              </p>
+              <p class="code">a:link {color: #009900;}</p>
+              <p>
+                The first on the list sets the color of a link when no event is
+                occuring
+              </p>
+              <p class="code">a:visited {color: #999999;}</p>
+              <p>
+                The second sets the color a link changes to, when the user has
+                already visited that url
+              </p>
+              <p class="code">a:hover {color: #333333;}</p>
+              <p>
+                The third sets the color a link changes to as the user places
+                their mouse pointer over the link
+              </p>
+              <p class="code">a:focus {color: #333333;}</p>
+              <p>
+                The fourth is primarilly for the same purpose as the last one,
+                but this one is for users that are not using a mouse and are
+                tabbing through the links via there keyboards tab key, it sets
+                the color a link changes to as the user tabs through the links
+              </p>
+              <p class="code">a:active {color: #009900;}</p>
+              <p>
+                The fifth on the list sets the color a link changes to as it is
+                pressed.
+              </p>
+              <p>
+                Lets look at an example:
+                <a
+                  href="https://google.com/"
+                  class="example_link"
+                  title="Google"
+                  >Google</a
+                >
+              </p>
+              <p>
+                If your last visit to Google is not stored in your cache than
+                the above link to google is blue, if you have already been to
+                google then the link should be grey. if you mouseover or tab
+                through the links, the link will change to dark grey, and last
+                but not least if you click and hold the link without releasing
+                it you will see it return back to the original blue color.
+              </p>
+              <p>
+                <img
+                  src="images/exclamation.gif"
+                  class="icon"
+                  alt="exclamation"
+                  width="17"
+                  height="17"
+                />&nbsp; You must declare the a:link and a:visited before you
+                declare a:hover. Furthermore, you must declare a:hover before
+                you can declare a:active.
+              </p>
+              <p>
+                Using the above code will style all links on your web page,
+                unless you declare a seperate set of link styles for a certain
+                area of your webpage.
+              </p>
+
+              <p><a name="pseudo_classes"></a></p>
+              <h2>Pseudo Classes</h2>
+              <p>
+                You can set links contained in different parts of your web page
+                to be different colors by using the pseudo class. For example,
+                lets say you want your links in the content area to have a
+                different color then the links in the left or right column of
+                your webpage.
+              </p>
+              <p>You can do this in the following fashion:</p>
+              <p class="code">
+                #content a:link {color: #009900;}<br />
+                #content a:visited {color: #999999;}<br />
+                #content a:hover {color: #333333;}<br />
+                #content a:focus {color: #333333;}<br />
+                #content a:active {color: #009900;}
+              </p>
+              <p>
+                Now assuming that you have your main content in a division named
+                “content” all links within that division will now be styled by
+                this new style selector. Should your selector have a different
+                name, just change the #content selector to match your division
+                name.
+              </p>
+              <p>Then for the links in a column you could use the following:</p>
+              <p class="code">
+                #column a:link {color: #009900;}<br />
+                #column a:visited {color: #999999;}<br />
+                #column a:hover {color: #333333;}<br />
+                #column a:focus {color: #333333;}<br />
+                #column a:active {color: #009900;}
+              </p>
+              <p>
+                Once again, this assumes the name of the column division, just
+                change the name to match yours.
+              </p>
+              <p>
+                This same method can be accomplished by declaring a class
+                instead of an id.
+              </p>
+              <p class="code">
+                a.column:link {color: #009900;}<br />
+                a.column:visited {color: #999999;}<br />
+                a.column:hover {color: #333333;}<br />
+                a.column:focus {color: #333333;}<br />
+                a.column:active {color: #009900;}
+              </p>
+              <p>
+                Though in this case you will need to add a class to each link
+              </p>
+              <p class="code">
+                &lt;a <span class="paths">class=”column”</span> href=””
+                title=””&gt;some link text&lt;/a&gt;
+              </p>
+              <p>But, there is still yet an easier way</p>
+              <p class="code">
+                .column a:link {color: #009900;}<br />
+                .column a:visited {color: #999999;}<br />
+                .column a:hover {color: #333333;}<br />
+                .column a:focus {color: #333333;}<br />
+                .column a:active {color: #009900;}
+              </p>
+              <p>Then in the (X)HTML file</p>
+              <p class="code">
+                &lt;div class=”column”&gt;<br />&lt;a href=”” title=””&gt;some
+                link text&lt;/a&gt;<br />&lt;/div&gt;
+              </p>
+              <p>
+                There are other properties that can be added to links other than
+                color, I was just trying to keep it simple. Almost any property
+                that can be used to style
+                <a
+                  href="https://www.w3schools.com/css/css_reference.asp#text"
+                  title=""
+                  >text</a
+                >
+                and
+                <a
+                  href="https://www.w3schools.com/css/css_reference.asp#font"
+                  title="W3Schools Fonts"
+                  >fonts</a
+                >
+                can be used to style links also
+              </p>
+            </div>
+          </article>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

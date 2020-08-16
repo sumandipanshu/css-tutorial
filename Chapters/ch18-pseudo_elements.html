@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <div class="site-inner">
+      <div class="content-sidebar-wrap">
+        <main class="content" id="genesis-content">
+          <article class="page entry">
+            <header class="entry-header">
+              <h1 class="entry-title" itemprop="headline">
+                Chapter 18 : CSS Pseudo Elements
+              </h1>
+            </header>
+            <div class="entry-content" itemprop="text">
+              <br />
+              <h2>The Syntax</h2>
+              <p>
+                The syntax for pseudo elements is a bit different than that of
+                regular CSS, but it’s real close. If you have already read
+                <a
+                  href="ch11-anchors_links_pseudoClasses.html"
+                  title="Chapter 11 - CSS Anchors, links and pseudo classes"
+                  >chapter 11</a
+                >
+                then you are slightly ahead of the game.
+              </p>
+              <p class="code">
+                selector:<span class="paths">pseudo-element</span> {property:
+                value}
+              </p>
+              <p>
+                As you can see the only difference is that you place the pseudo
+                element after the selector, and divide the 2 with a (:) colon.
+              </p>
+              <p>Or you can assign a class to a pseudo element as follows</p>
+              <p class="code">
+                selector.<span class="paths">p</span>:pseudo-element {property:
+                value}
+              </p>
+              <p>
+                Using the above code would style all paragraphs within the
+                declared selector with the pseudo element.
+              </p>
+              <h2>The elements:</h2>
+              <ul>
+                <li>first-line</li>
+                <li>first-letter</li>
+              </ul>
+              <h2>First Line</h2>
+              <p>
+                The first-line pseudo element styles the first line of text in a
+                block level element.
+              </p>
+              <p class="code">
+                p{font-size: small;}<br />p:<span class="paths"
+                  >first-line</span
+                >
+                {font-size: medium; color: #ff0000;}
+              </p>
+              <p>
+                As you can see in the above example paragraphs are set to be a
+                small font size, but the p:first-line is set to be a medium size
+                and a red color. The result is that the first line of all
+                paragraphs will be red in color and a bit larger than the rest
+                of the paragraph.
+              </p>
+              <p>
+                Though lets say you only want to style a certain paragraph of
+                text with the first-line element. Thats where declaring a class
+                to the pseudo element comes into play.
+              </p>
+              <h5>first-line with class</h5>
+              <p class="code">
+                p<span class="paths">.special</span>:first-line {font-size:
+                medium; color: #ff0000;}
+              </p>
+              <p>I have declared a class of special within my css file.</p>
+              <p><strong>First-Line Example</strong></p>
+              <p class="special">
+                This is a special sentence I wrote to demonstrate the use and
+                look of the first-line pseudo element. As you can see the first
+                line of this paragraph is styled differently than the rest of
+                the text within it. All of this was done by simply adding
+                class=”special” to the opening &lt;p&gt; tag for this paragraph.
+              </p>
+              <p class="code">
+                &lt;p <span class="paths">class=”special”&gt;</span>the
+                content&lt;/p&gt;
+              </p>
+              <p>
+                Where the first-line ends depends on the width of the browser
+                window or containing element, you can resize this page and see
+                that it adjusts as you change the size of the browser window.
+              </p>
+              <p>
+                The following properties can be assigned to the first-line
+                pseudo element:
+              </p>
+              <ul>
+                <li>background</li>
+                <li>clear</li>
+                <li>color</li>
+                <li>font</li>
+                <li>letter-spacing</li>
+                <li>line-height</li>
+                <li>text-decoration</li>
+                <li>text-transform</li>
+                <li>vertical-align</li>
+                <li>word-spacing</li>
+              </ul>
+              <h2>First Letter</h2>
+              <p>
+                The first-letter pseudo element styles the first letter of text
+                in a block level element.
+              </p>
+              <p class="code">
+                p{font-size: small;}<br />p:<span class="paths"
+                  >first-letter</span
+                >
+                {font-size: medium; color: #ff0000;}
+              </p>
+              <p>
+                As you can see in the above example paragraphs are set to be a
+                small font size, but the p:first-letter is set to be a medium
+                size and a red color. The result is that the first letter of all
+                paragraphs will be red in color and a bit larger than the rest
+                of the paragraph.
+              </p>
+              <p>
+                Though lets say you only want to style a certain paragraph of
+                text with the first-letter element. Thats where declaring a
+                class to the pseudo element comes into play.
+              </p>
+              <h5>first-letter with class</h5>
+              <p class="code">
+                p<span class="paths">.special_letter</span>:first-letter
+                {font-size: x-large; font-weight: bold; color: #ff0000;}
+              </p>
+              <p>
+                I have declared a class of special_letter within my css file.
+              </p>
+              <p><strong>First-Letter Example</strong></p>
+              <p class="special_letter">
+                This is a special sentence I wrote to demonstrate the use and
+                look of the first-letter pseudo element. As you can see the
+                first letter of this paragraph is styled differently than the
+                rest of the characters within it. All of this was done by simply
+                adding class=”special_letter” to the opening &lt;p&gt; tag for
+                this paragraph.
+              </p>
+              <p class="code">
+                &lt;p <span class="paths">class=”special_letter”&gt;</span>the
+                content&lt;/p&gt;
+              </p>
+              <p>
+                The following properties can be assigned to the first-letter
+                pseudo element:
+              </p>
+              <ul>
+                <li>background</li>
+                <li>border</li>
+                <li>clear</li>
+                <li>color</li>
+                <li>float</li>
+                <li>font</li>
+                <li>line-height</li>
+                <li>margin</li>
+                <li>padding</li>
+                <li>text-decoration</li>
+                <li>text-transform</li>
+                <li>word-spacing</li>
+              </ul>
+            </div>
+          </article>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

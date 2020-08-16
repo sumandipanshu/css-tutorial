@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <div class="site-inner">
+      <div class="content-sidebar-wrap">
+        <main class="content" id="genesis-content">
+          <article class="page entry">
+            <header class="entry-header">
+              <h1 class="entry-title" itemprop="headline">
+                Chapter 16 : CSS Classification
+              </h1>
+            </header>
+            <div class="entry-content" itemprop="text">
+              <br />
+              <h5>Inherited: No</h5>
+              <p><a name="clear"></a></p>
+              <h2>Clear</h2>
+              <p>
+                You can control if an element allows floated elements to its
+                sides with the <span class="hilight">clear</span> property
+              </p>
+              <p class="code">clear: value;</p>
+              <p>Values:</p>
+              <ul>
+                <li>none</li>
+                <li>both</li>
+                <li>left</li>
+                <li>right</li>
+              </ul>
+              <p><strong>Now, what does all that mean?</strong></p>
+              <h5>None</h5>
+              <p>
+                This is the default setting, floated elements can appear on
+                either side of the element set to
+                <span class="hilight">clear: none;</span>
+              </p>
+              <h5>Both</h5>
+              <p>
+                Setting the value to both, causes no floated elements to appear
+                on either side of the element set to
+                <span class="hilight">clear: both;</span>
+              </p>
+              <h5>Left</h5>
+              <p>
+                Setting the value to left, causes no floated elements to appear
+                to the left side of the element set to
+                <span class="hilight">clear: left;</span>
+              </p>
+              <h5>Right</h5>
+              <p>
+                Setting the value to right, causes no floated elements to appear
+                to the right side of the element set to
+                <span class="hilight">clear: right;</span>
+              </p>
+
+              <p><a name="clip"></a></p>
+              <h2>Clip</h2>
+              <p>
+                You can control how much of an element is visible with the
+                <span class="hilight">clip</span> property
+              </p>
+              <p class="code">clip: value;</p>
+              <p>Values:</p>
+              <ul>
+                <li>auto</li>
+                <li>shape</li>
+              </ul>
+              <p>
+                Currently the only shape recognized by the clip property is
+                <span class="hilight">rect</span> (rectangle)
+              </p>
+              <p class="code">clip: rect(10px, 10px, 10px, 10px);</p>
+              <p><a name="cursor"></a></p>
+              <h2>Cursor</h2>
+              <p>
+                You can control the style of cursor to be used in an element
+                with the <span class="hilight">cursor</span> property
+              </p>
+              <p class="code">cursor: value;</p>
+              <p>Values:</p>
+              <ul>
+                <li>auto</li>
+                <li>crosshair</li>
+                <li>default</li>
+                <li>help</li>
+                <li>move</li>
+                <li>pointer</li>
+                <li>text</li>
+                <li>url</li>
+                <li>wait</li>
+                <li>e-resize</li>
+                <li>ne-resize</li>
+                <li>nw-resize</li>
+                <li>n-resize</li>
+                <li>se-resize</li>
+                <li>sw-resize</li>
+                <li>s-resize</li>
+                <li>w-resize</li>
+              </ul>
+              <p>
+                If you choose to use a custom cursor, it is always a good idea
+                to declare a generic one after the custom value.
+              </p>
+              <p class="code">cursor: url(“image.cur”), default;</p>
+              <p><a name="display"></a></p>
+              <h2>Display</h2>
+              <p>
+                You can control how an element is displayed with the
+                <span class="hilight">display</span> property
+              </p>
+              <p class="code">display: value;</p>
+              <p>Values:</p>
+              <ul>
+                <li>block</li>
+                <li>inline</li>
+                <li>list-item</li>
+                <li>none</li>
+              </ul>
+              <p><strong>Now, what does all that mean?</strong></p>
+              <h5>Block</h5>
+              <p>Creates a line break before and after the element</p>
+              <h5>Inline</h5>
+              <p>No line break is created</p>
+              <h5>List Item</h5>
+              <p>
+                Creates a line break before and after the element and adds a
+                list item marker
+              </p>
+              <h5>None</h5>
+              <p>Makes an element not display on the page</p>
+              <p><a name="float"></a></p>
+              <h2>Float</h2>
+              <p>
+                The float property changes how text and or images within an
+                element are displayed
+              </p>
+              <p class="code">float: value;</p>
+              <p>Values:</p>
+              <ul>
+                <li>left</li>
+                <li>right</li>
+                <li>none</li>
+              </ul>
+              <p><strong>Now, what does all that mean?</strong></p>
+              <h5>Left</h5>
+              <p>
+                The image/text is displayed to the left of the parent element
+              </p>
+              <h5>Right</h5>
+              <p>
+                The image/text is displayed to the right of the parent element
+              </p>
+              <h5>None</h5>
+              <p>There is no change in the way the image/text is displayed</p>
+              <p><a name="overflow"></a></p>
+              <h2>Overflow</h2>
+              <p>
+                You can control what an elements contents will do if it
+                overflows it boundaries with the
+                <span class="hilight">overflow</span> property
+              </p>
+              <p class="code">overflow: value;</p>
+              <p>Values:</p>
+              <ul>
+                <li>auto</li>
+                <li>hidden</li>
+                <li>visible</li>
+                <li>scroll</li>
+              </ul>
+              <div id="overflow_box">
+                <strong>Overflow Example</strong>
+                <p></p>
+                <p>
+                  As you can see, with this property you can mimic an iframe.
+                  This box is set to an overflow value of “auto”. Meaning that
+                  if the contents of the element break the boundaries it should
+                  add a scrollbar.
+                </p>
+                <p>
+                  If it we’re set to an overflow value of “scroll”, horizontal
+                  and vertical scrollbars would appear no matter what.
+                </p>
+                <p>
+                  If it we’re set to an overflow value of “hidden”, the contents
+                  would be clipped at the boundary and no scrollbar would
+                  appear.
+                </p>
+                <p>
+                  If it we’re set to an overflow value of “visible”, the
+                  contents would expand past the boundaries and no scrollbar
+                  would appear.
+                </p>
+                <p></p>
+              </div>
+              <p>Here is what I have in my CSS file.</p>
+              <p class="code">
+                #overflow_box {width:200px; height:200px; border-top: 1px solid
+                #eee; border-left: 1px solid #eee; border-bottom: 1px solid
+                #eee; padding: 10px; overflow: auto;}
+              </p>
+              <p>Then in the (X)HTML file I have this:</p>
+              <p class="code">
+                &lt;div id=”overflow_box”&gt;Contents&lt;/div&gt;
+              </p>
+              <p><a name="vivibility"></a></p>
+              <h2>Visibility</h2>
+              <p>
+                You can control if an element is visible or not with the
+                <span class="hilight">visibility</span> property
+              </p>
+              <p class="code">visibility: value;</p>
+              <p>Values:</p>
+              <ul>
+                <li>hidden</li>
+                <li>visible</li>
+              </ul>
+              <p><a name="z_index"></a></p>
+              <h2>Z-Index</h2>
+              <p>
+                You can control the layer order of positioned elements with the
+                <span class="hilight">z-index</span> property
+              </p>
+              <p class="code">z-index: value;</p>
+              <p>Values:</p>
+              <ul>
+                <li>auto</li>
+                <li>number</li>
+              </ul>
+              <p>
+                The higher the number the higher the level. Negative numbers are
+                allowed
+              </p>
+            </div>
+          </article>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

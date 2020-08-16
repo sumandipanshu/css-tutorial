@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <div class="site-inner">
+      <div class="content-sidebar-wrap">
+        <main class="content" id="genesis-content">
+          <article class="page entry">
+            <header class="entry-header">
+              <h1 class="entry-title" itemprop="headline">
+                Chapter 7 : CSS Margins
+              </h1>
+            </header>
+            <div class="entry-content" itemprop="text">
+              <br />
+              <h3>Inherited: No</h3>
+              <p>
+                As you may have guessed, the margin property declares the margin
+                between an (X)HTML element and the elements around it. The
+                margin property can be set for the top, left, right and bottom
+                of an element. (see example below)
+              </p>
+              <p class="code">
+                &nbsp;&nbsp;margin-top:
+                <span class="paths">length percentage or auto</span>;
+                <br />&nbsp;&nbsp;margin-left:
+                <span class="paths">length percentage or auto</span
+                >;<br />&nbsp;&nbsp;margin-right:
+                <span class="paths">length percentage or auto</span
+                >;<br />&nbsp;&nbsp;margin-bottom:
+                <span class="paths">length percentage or auto</span>;
+              </p>
+              <p>
+                As you can also see in the above example you have 3 choices of
+                values for the margin property
+              </p>
+              <ul>
+                <li>length</li>
+                <li>percentage</li>
+                <li>auto</li>
+              </ul>
+              <p>
+                You can also declare all the margins of an element in a single
+                property as follows:
+              </p>
+              <p class="code">&nbsp;&nbsp;margin: 10px 10px 10px 10px;</p>
+              <p>
+                If you declare all 4 values as I have above, the order is as
+                follows:
+              </p>
+              <ol>
+                <li>top</li>
+                <li>right</li>
+                <li>bottom</li>
+                <li>left</li>
+              </ol>
+              <p>
+                If only one value is declared, it sets the margin on all sides.
+                (see below)
+              </p>
+              <p class="code">&nbsp;&nbsp;margin: 10px;</p>
+              <p>
+                If you only declare two or three values, the undeclared values
+                are taken from the opposing side. (see below)
+              </p>
+              <p class="code">
+                &nbsp;&nbsp;margin: 10px 10px;
+                <span class="paths">/* 2 values */</span
+                ><br />&nbsp;&nbsp;margin: 10px 10px 10px;
+                <span class="paths">/* 3 values */</span>
+              </p>
+              <p>
+                You can set the margin property to negative values. If you do
+                not declare the margin value of an element, the margin is 0
+                (zero).
+              </p>
+              <p class="code">&nbsp;&nbsp;margin: -10px;</p>
+              <p>
+                Elements like paragraphs have default margins in some browsers,
+                to combat this set the margin to 0 (zero).
+              </p>
+              <p class="code">&nbsp;&nbsp;p {margin: 0;}</p>
+              <p>
+                Note: You do not have to add px (pixels) or whatever
+                <a
+                  href="https://www.w3schools.com/css/css_units.asp"
+                  title="W3Schools"
+                  >units</a
+                >
+                you use, if the value is 0 (zero).
+              </p>
+              <p>
+                You can see in the example below, the elements for this site are
+                set to be 20px (pixels) from the body
+              </p>
+              <p class="code">
+                body{ <br />&nbsp;&nbsp;<span class="paths">margin: 20px;</span
+                ><br />&nbsp;&nbsp;background: #eeeeee;<br />&nbsp;&nbsp;font-size:
+                small;<br />&nbsp;&nbsp;font-family: Tahoma, Arial, “Trebuchet
+                MS”, Helvetica, sans-serif;<br />&nbsp;&nbsp;text-align:
+                left;<br />}
+              </p>
+            </div>
+          </article>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

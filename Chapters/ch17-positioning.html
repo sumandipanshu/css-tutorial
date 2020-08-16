@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <div class="site-inner">
+      <div class="content-sidebar-wrap">
+        <main class="content" id="genesis-content">
+          <article class="page entry">
+            <header class="entry-header">
+              <h1 class="entry-title" itemprop="headline">
+                Chapter 17 : CSS Positioning
+              </h1>
+            </header>
+            <div class="entry-content" itemprop="text">
+              <br />
+              <h5>Inherited: No</h5>
+              <h2>Position</h2>
+              <p>
+                The position property (as you may have guessed) changes how
+                elements are positioned on your webpage.
+              </p>
+              <p class="code">position: value;</p>
+              <p>Values:</p>
+              <ul>
+                <li>static</li>
+                <li>relative</li>
+                <li>absolute</li>
+                <li>fixed</li>
+              </ul>
+              <p><strong>Now, what does all that mean?</strong></p>
+              <h5>Static</h5>
+              <p>
+                Static positioning is by default the way an element will appear
+                in the normal flow of your (X)HTML file. It is not necessary to
+                declare a position of static. Doing so, is no different than not
+                declaring it at all.
+              </p>
+              <p class="code">position: static;</p>
+
+              <h5>Relative</h5>
+              <p>
+                Positioning an element relatively places the element in the
+                normal flow of your (X)HTML file and then offsets it by some
+                amount using the properties left, right, top and bottom. This
+                may cause the element to overlap other elements that are on the
+                page, which of course may be the effect that is required.
+              </p>
+              <p class="code">position: relative;</p>
+              <h5>Absolute</h5>
+              <p>
+                Positioning an element absolutely, removes the element from the
+                normal flow of your (X)HTML file, and positions it to the top
+                left of its nearest parent element that has a position declared
+                other than static. If no parent element with a position other
+                than static exists then it will be positioned from the top left
+                of the browser window.
+              </p>
+              <p class="code">position: absolute;</p>
+              <h5>Fixed</h5>
+              <p>
+                Positioning an element with the fixed value, is the same as
+                absolute except the parent element is always the browser window.
+                It makes no difference if the fixed element is nested inside
+                other positioned elements.
+              </p>
+              <p>
+                Furthermore, an element that is positioned with a fixed value,
+                will not scroll with the document. It will remain in its
+                position regardless of the scroll position of the page.
+              </p>
+              <p>
+                At this time IE6 (Internet Explorer 6) does not support the
+                fixed value for the positioning of an element. Thus it will not
+                position fixed elements correctly and will still scroll with the
+                page. To see this effect in action you will need to use a
+                standards compliant browser, such as
+                <a href="http://spreadfirefox.com/" title="Get a real browser"
+                  >Firefox 1.0</a
+                >
+              </p>
+              <p class="code">position: fixed;</p>
+              <p>
+                When positioning elements with relative, absolute or fixed
+                values the following properties are used to offset the element:
+              </p>
+              <ul>
+                <li>top</li>
+                <li>left</li>
+                <li>right</li>
+                <li>bottom</li>
+              </ul>
+              <p class="code">position: absolute; top: 10px; right: 10px;</p>
+            </div>
+          </article>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <div class="site-inner">
+      <div class="content-sidebar-wrap">
+        <main class="content" id="genesis-content">
+          <article class="page entry">
+            <header class="entry-header">
+              <h1 class="entry-title" itemprop="headline">
+                Chapter 5 : CSS Divisions
+              </h1>
+            </header>
+            <div class="entry-content" itemprop="text">
+              <p>
+                Ok so you have finished the first 4 chapters in my series. You
+                have learned the very basics of CSS, how the syntax works and a
+                bit about classes and IDs. Now we are gonna take a quick break
+                from CSS and focus on the (X)HTML side of using it.
+              </p>
+
+              <h2>Divsions</h2>
+              <p>
+                Divisions are a block level (X)HTML element used to define
+                sections of an (X)HTML file. A division can contain all the
+                parts that make up your website. Including additional divisions,
+                spans, images, text and so on.
+              </p>
+              <p>
+                You define a division within an (X)HTML file by placing the
+                following between the &lt;body&gt;&lt;/body&gt; tags:
+              </p>
+              <p class="code">
+                &lt;div&gt;<br />Site contents go here<br />&lt;/div&gt;
+              </p>
+              <p>
+                Though most likely you will want to add some style to it. You
+                can do that in the following fashion:
+              </p>
+              <p class="code">
+                &lt;div id=”container”&gt;<br />Site contents go here<br />&lt;/div&gt;
+              </p>
+              <p>The CSS file contains this:</p>
+              <p class="code">
+                #container{<br />&nbsp;&nbsp;width: 70%;<br />&nbsp;&nbsp;margin:
+                auto;<br />&nbsp;&nbsp;padding: 20px;<br />&nbsp;&nbsp;border:
+                1px solid #666;<br />&nbsp;&nbsp;background: #ffffff;<br />}
+              </p>
+              <p>
+                Now everything within that division will be styled by the
+                “container” style rule, I defined within my CSS file. A division
+                creates a linebreak by default. You can use both
+                <a href="chapter_3_css_class.html" title="Chapter 3: Classes"
+                  >classes</a
+                >
+                and
+                <a href="chapter_4_css_id.html" title="Chapter 4 - IDs">IDs</a>
+                with a division tag to style sections of your website.
+              </p>
+            </div>
+          </article>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

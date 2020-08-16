@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <div class="site-inner">
+      <div class="content-sidebar-wrap">
+        <main class="content" id="genesis-content">
+          <article class="page entry">
+            <header class="entry-header">
+              <h1 class="entry-title" itemprop="headline">
+                Chapter 4 : CSS IDs
+              </h1>
+            </header>
+            <div class="entry-content" itemprop="text">
+              <p>
+                IDs are similar to
+                <a href="chapter_3_css_class.html" title="Chapter 3 - Classes"
+                  >classes</a
+                >, except once a specific id has been declared it cannot be used
+                again within the same (X)HTML file.
+              </p>
+              <p>
+                I generally use IDs to style the layout elements of a page that
+                will only be needed once, whereas I use
+                <a href="chapter_3_css_class.html" title="Chapter 3 - Classes"
+                  >classes</a
+                >
+                to style text and such that may be declared multiple times.
+              </p>
+              <p>
+                The main container for this page is defined by the following.
+              </p>
+              <p class="code">
+                &lt;div
+                <span class="paths">id</span>=”container”&gt;<br />Everything
+                within my document is inside this division.<br />&lt;/div&gt;
+              </p>
+              <p>
+                I have chosen the id selector for the “container” division over
+                a class, because I only need to use it one time within this
+                file.
+              </p>
+              <p>Then in my CSS file I have the following:</p>
+              <p class="code">
+                <span class="paths">#</span>container{ <br />&nbsp;&nbsp;width:
+                80%;<br />&nbsp;&nbsp;margin: auto;<br />&nbsp;&nbsp;padding:
+                20px;<br />&nbsp;&nbsp;border: 1px solid #666;<br />&nbsp;&nbsp;background:
+                #ffffff;<br />}
+              </p>
+              <p>
+                You will notice that the id selector begins with a (<span
+                  class="paths"
+                  >#</span
+                >) number sign instead of a (<span class="paths">.</span>)
+                period, as the class selector does.
+              </p>
+            </div>
+          </article>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <div class="site-inner">
+      <div class="content-sidebar-wrap">
+        <main class="content" id="genesis-content">
+          <article class="page entry">
+            <header class="entry-header">
+              <h1 class="entry-title" itemprop="headline">
+                Chapter 8 : CSS Padding
+              </h1>
+            </header>
+            <div class="entry-content" itemprop="text">
+              <br />
+              <h3>Inherited: No</h3>
+              <p>
+                Padding is the distance between the border of an (X)HTML element
+                and the content within it.
+              </p>
+              <p>
+                Most of the rules for
+                <a href="chapter_7_css_margins.html" title="Chapter 7 - Margins"
+                  >margins</a
+                >
+                also apply to padding, except there is no “auto” value, and
+                negative values cannot be declared for padding.
+              </p>
+              <p class="code">
+                &nbsp;&nbsp;padding-top:
+                <span class="paths">length percentage</span>;
+                <br />&nbsp;&nbsp;padding-left:
+                <span class="paths">length percentage</span
+                >;<br />&nbsp;&nbsp;padding-right:
+                <span class="paths">length percentage</span
+                >;<br />&nbsp;&nbsp;padding-bottom:
+                <span class="paths">length percentage</span>;
+              </p>
+              <p>
+                As you can also see in the above example you have 2 choices of
+                values for the <span class="hilight">padding</span> property
+              </p>
+              <ul>
+                <li>length</li>
+                <li>percentage</li>
+              </ul>
+              <p>
+                You can also declare all the padding of an element in a single
+                property as follows:
+              </p>
+              <p class="code">&nbsp;&nbsp;padding: 10px 10px 10px 10px;</p>
+              <p>
+                If you declare all 4 values as I have above, the order is as
+                follows:
+              </p>
+              <ol>
+                <li>top</li>
+                <li>right</li>
+                <li>bottom</li>
+                <li>left</li>
+              </ol>
+              <p>
+                If only one value is declared, it sets the padding on all sides.
+                (see below)
+              </p>
+              <p class="code">&nbsp;&nbsp;padding: 10px;</p>
+              <p>
+                If you only declare two or three values, the undeclared values
+                are taken from the opposing side. (see below)
+              </p>
+              <p class="code">
+                &nbsp;&nbsp;padding: 10px 10px;
+                <span class="paths">/* 2 values */</span
+                ><br />&nbsp;&nbsp;padding: 10px 10px 10px;
+                <span class="paths">/* 3 values */</span>
+              </p>
+              <p>
+                If you do not declare the padding value of an element, the
+                padding is 0 (zero).
+              </p>
+              <p>
+                Note: You do not have to add px (pixels) or whatever
+                <a
+                  href="https://www.w3schools.com/css/css_units.asp"
+                  title="W3Schools"
+                  >units</a
+                >
+                you use, if the value is 0 (zero).
+              </p>
+              <p>
+                You can see in the example below, the main container for this
+                site has 30px (pixels) of padding between the border and the
+                text.
+              </p>
+              <p class="code">
+                #container{ <br />&nbsp;&nbsp;width: 70%;<br />&nbsp;&nbsp;margin:
+                auto;<br />&nbsp;&nbsp;<span class="paths">padding: 30px;</span
+                ><br />&nbsp;&nbsp;border: 1px solid #666;<br />&nbsp;&nbsp;background:
+                #ffffff;<br />}
+              </p>
+            </div>
+          </article>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

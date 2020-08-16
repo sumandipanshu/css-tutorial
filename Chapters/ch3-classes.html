@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <div class="site-inner">
+      <div class="content-sidebar-wrap">
+        <main class="content" id="genesis-content">
+          <article class="page entry">
+            <header class="entry-header">
+              <h1 class="entry-title" itemprop="headline">
+                Chapter 3 : CSS Classes
+              </h1>
+            </header>
+            <div class="entry-content" itemprop="text">
+              <p>
+                The class selector allows you to style items within the same
+                (X)HTML element differently. Similiar to what I mentioned in the
+                introduction about inline styles. Except with classes the style
+                can be overwritten by changing out stylesheets. You can use the
+                same class selector again and again within an (X)HTML file.
+              </p>
+              <p>
+                To put it more simply, this sentence you are reading is defined
+                in my CSS file with the following.
+              </p>
+              <p class="code">
+                p { <br />&nbsp;&nbsp;font-size: small; <br />&nbsp;&nbsp;color:
+                #333333<br />}
+              </p>
+              <p>
+                Pretty simple, but lets say that I wanted to change the word
+                “sentence” to green bold text, while leaving the rest of the
+                sentence untouched. I would do the following to my (X)HTML file.
+              </p>
+              <p class="code">
+                &lt;p&gt;<br />To put it more simply, this
+                <span class="paths">&lt;span class=”greenboldtext”&gt;</span
+                >sentence<span class="paths">&lt;/span&gt;</span> you are
+                reading is styled in my CSS file by the following.<br />&lt;/p&gt;
+              </p>
+              <p>Then in my CSS file I would add this style selector:</p>
+              <p class="code">
+                .greenboldtext{ <br />&nbsp;&nbsp;font-size: small;
+                <br />&nbsp;&nbsp;color: #008080;<br />&nbsp;&nbsp;font-weight:
+                bold;<br />}
+              </p>
+              <p>The final result would look like the following:</p>
+              <p>
+                To put it more simply, this
+                <span class="greenboldtext">sentence</span> you are reading is
+                styled in my CSS file by the following.
+              </p>
+              <p>
+                Please note that a class selector begins with a (<span
+                  class="paths"
+                  >.</span
+                >) period. The reason I named it “greenboldtext” is for example
+                purposes, you can name it whatever you want. Though I do
+                encourage you to use selector names that are descriptive. You
+                can reuse the “greenboldtext” class as many times as you want.
+              </p>
+            </div>
+          </article>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

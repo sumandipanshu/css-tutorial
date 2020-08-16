@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <body>
+    <div class="site-inner">
+      <div class="content-sidebar-wrap">
+        <main class="content" id="genesis-content">
+          <article class="page entry">
+            <header class="entry-header">
+              <h1 class="entry-title" itemprop="headline">
+                Chapter 1 : Introduction to CSS
+              </h1>
+            </header>
+            <div class="entry-content" itemprop="text">
+              <p>
+                A CSS (cascading style sheet) file allows you to separate your
+                web sites (X)HTML content from it’s style. As always you use
+                your (X)HTML file to arrange the content, but all of the
+                presentation (fonts, colors, background, borders, text
+                formatting, link effects &amp; so on…) are accomplished within a
+                CSS.
+              </p>
+              <p>
+                At this point you have some choices of how to use the CSS,
+                either internally or externally.
+              </p>
+              <p><a name="internal_stylesheets"></a></p>
+              <h2>Internal Stylesheet</h2>
+              <p>
+                First we will explore the internal method. This way you are
+                simply placing the CSS code within the &lt;head&gt;&lt;/head&gt;
+                tags of each (X)HTML file you want to style with the CSS. The
+                format for this is shown in the example below.
+              </p>
+              <p class="code">
+                &lt;head&gt;<br />
+                &lt;title&gt;&lt;title&gt;<br />
+                &lt;style type=”text/css”&gt;<br />
+                <em><span class="paths">CSS Content Goes Here</span></em
+                ><br />
+                &lt;/style&gt;<br />
+                &lt;/head&gt;<br />
+                &lt;body&gt;
+              </p>
+              <p>
+                With this method each (X)HTML file contains the CSS code needed
+                to style the page. Meaning that any changes you want to make to
+                one page, will have to be made to all. This method can be good
+                if you need to style only one page, or if you want different
+                pages to have varying styles.
+              </p>
+
+              <p><a name="external_stylesheets"></a></p>
+              <h2>External Stylesheet</h2>
+              <p>
+                Next we will explore the external method. An external CSS file
+                can be created with any text or HTML editor such as “Notepad” or
+                “Dreamweaver”. A CSS file contains no (X)HTML, only CSS. You
+                simply save it with the .css file extension. You can link to the
+                file externally by placing one of the following links in the
+                head section of every (X)HTML file you want to style with the
+                CSS file.
+              </p>
+              <p class="code">
+                &lt;link rel=”stylesheet” type=”text/css” href=<em
+                  ><span class="paths">“Path To stylesheet.css”</span></em
+                >
+                /&gt;
+              </p>
+              <p>Or you can also use the @import method as shown below</p>
+              <p class="code">
+                &lt;style type=”text/css”&gt;@import url(<em
+                  ><span class="paths">Path To stylesheet.css</span></em
+                >)&lt;/style&gt;
+              </p>
+              <p>
+                Either of these methods are achieved by placing one or the other
+                in the head section as shown in example below.
+              </p>
+              <p class="code">
+                &lt;head&gt;<br />
+                &lt;title&gt;&lt;title&gt;<br />
+                <em
+                  ><span class="paths"
+                    >&lt;link rel=”stylesheet” type=”text/css”href=”../style.css”
+                    /&gt;</span
+                  ></em
+                ><br />
+                &lt;/head&gt;<br />
+                &lt;body&gt;
+              </p>
+              <p>or</p>
+              <p>
+                &lt;head&gt;<br />
+                &lt;title&gt;&lt;title&gt;<br />
+                &lt;style type=”text/css”&gt;
+                <em
+                  ><span class="paths"
+                    >@import url(<em
+                      ><span class="paths">Path To stylesheet.css</span></em
+                    >)</span
+                  ></em
+                >
+                &lt;/style&gt;<br />
+                &lt;/head&gt;<br />
+                &lt;body&gt;
+              </p>
+              <p>
+                By using an external style sheet, all of your (X)HTML files link
+                to one CSS file in order to style the pages. This means, that if
+                you need to alter the design of all your pages, you only need to
+                edit one .css file to make global changes to your entire
+                website.
+              </p>
+              <p>Here are a few reasons this is better.</p>
+              <ul>
+                <li>Easier Maintenance</li>
+                <li>Reduced File Size</li>
+                <li>Reduced Bandwidth</li>
+                <li>Improved Flexibility</li>
+              </ul>
+              <p>
+                <strong>Are you getting the idea? It’s really cool.</strong>
+              </p>
+              <p><a name="cascading_order"></a></p>
+              <h2>Cascading Order</h2>
+              <p>
+                In the previous paragraphs, I have explained how to link to a
+                css file either internally or externally. If you understood,
+                than I am doing a good job. If not don’t fret, there is a long
+                way to go before we are finished. Assuming you have caught on
+                already, you are probably asking, well can I do both? The answer
+                is yes. You can have both internal, external, and now wait a
+                minute a third way? Yes inline styles also.
+              </p>
+              <p><a name="inline_styles"></a></p>
+              <h3>Inline Styles</h3>
+              <p>
+                I have not mentioned them until now because in a way they defeat
+                the purpose of using CSS in the first place. Inline styles are
+                defined right in the (X)HTML file along side the element you
+                want to style. See example below.
+              </p>
+              <p>
+                <span class="code"
+                  >&lt;p style=”color: #ff0000;”&gt;<em>Some red text</em
+                  >&lt;/p&gt;</span
+                >
+              </p>
+              <p style="color: #ff0000;">Some red text</p>
+              <p>
+                Inline styles will NOT allow the user to change styles of
+                elements or text formatted this way
+              </p>
+              <p><a name="misc"></a></p>
+              <p></p>
+
+              <h3>So, which is better?</h3>
+              <p>
+                So with all these various ways of inserting CSS into your
+                (X)HTML files, you may now be asking well which is better, and
+                if I use more than one method, in what order do these different
+                ways load into my browser?
+              </p>
+              <p>
+                All the various methods will cascade into a new “pseudo”
+                stylesheet in the following order:
+              </p>
+              <ol>
+                <li>Inline Style (inside (X)HTML element)</li>
+                <li>Internal Style Sheet (inside the &lt;head&gt; tag)</li>
+                <li>External Style Sheet</li>
+              </ol>
+              <p>
+                As far as which way is better, it depends on what you want to
+                do. If you have only one file to style then placing it within
+                the &lt;head&gt;&lt;/head&gt; tags (internal) will work fine.
+                Though if you are planning on styling multiple files then the
+                external file method is the way to go.
+              </p>
+              <p>
+                Choosing between the &lt;link related=&gt; &amp; the @import
+                methods are completely up to you. I will mention that the
+                @import method may take a second longer to read the CSS file in
+                Internet Explorer than the &lt;link related=&gt; option. To
+                combat this see&nbsp;<a
+                  title="FOUC"
+                  href="http://www.bluerobot.com/web/css/fouc.asp"
+                  >Flash of unstyled content</a
+                >
+              </p>
+              <h2>Users with Disabilities</h2>
+              <p>
+                The use of external style sheets also can benefit users that
+                suffer from disabilities. For instance, a user can turn off your
+                stylesheet or substitute one of there own to increase text size,
+                change colors and so on. For more information on making your
+                website accessible to all users please read
+                <a
+                  title="30 days to a more accessible web site"
+                  href="http://diveintoaccessibility.org/"
+                  >Dive into accessibility</a
+                >
+              </p>
+              <h2>Power Users</h2>
+              <p>
+                Swapping stylesheets is beneficial not only for users with
+                disabilities, but also power users who are particular about how
+                they read Web documents.
+              </p>
+              <h2>Browser Issues</h2>
+              <p>
+                You will discover as you delve farther into the world of CSS
+                that all browsers are not created equally, to say the least. CSS
+                can and will render differently in various browsers causing
+                numerous headaches.
+              </p>
+            </div>
+          </article>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
