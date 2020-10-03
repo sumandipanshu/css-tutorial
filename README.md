@@ -1,4 +1,4 @@
-# css-tutorial
+# css-tutorial - Created a basic CSS tutorial for beginners.
 
 [Link To website](https://css-tutorial.netlify.app/tableofcontents.html)
 
